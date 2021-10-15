@@ -169,7 +169,16 @@ With AD-Domain Module installed
 
 Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 
+####Group Policy Recon###
+with AD Module
 
+    Get-GPO -All
+    Get-GPResultatnSetOfPolicy -ReportType Html -Path C:\Users\Administrator\report.html
+
+with cmd
+gpresult /R /V
+Find-GPOComputerAdmin -Computername <>
+Find-GPOLocation -UserName domainAdmin -Verbose
 
 ####
 Help Links
